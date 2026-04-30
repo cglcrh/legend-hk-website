@@ -40,7 +40,7 @@ export default function Footer() {
                 <Cpu className="w-5 h-5 text-white" />
               </div>
               <div className="flex flex-col">
-                <span className="text-lg font-bold tracking-tight text-white leading-tight">酄景科技</span>
+                <span className="text-lg font-bold tracking-tight text-white leading-tight">酈景科技</span>
                 <span className="text-[10px] text-[#94a3b8] tracking-widest uppercase leading-tight">LegendHK</span>
               </div>
             </div>
@@ -55,7 +55,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2 text-[#94a3b8]">
                 <Mail className="w-4 h-4 flex-shrink-0 text-cyan-400" />
-                <span>contact@legendhk.tech</span>
+                <span>contact@91legend.com</span>
               </div>
             </div>
           </div>
@@ -116,7 +116,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="pt-8 border-t border-[rgba(148,163,184,0.1)] flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="text-sm text-[#64748b]">
-            © {new Date().getFullYear()} 酄景（香港）科技有限公司 LEGEND (HONGKONG) TECHNOLOGY CO. LIMITED
+            © {new Date().getFullYear()} 酈景（香港）科技有限公司 LEGEND (HONGKONG) TECHNOLOGY CO. LIMITED
           </div>
           <div className="text-xs text-[#64748b]">
             商业登记证号: 72627993-000-02-25-6 · 香港注册

@@ -1,12 +1,12 @@
-# 酄景科技 LegendHK 官网
+# 酈景科技 LegendHK 官网
 
-> 酄景（香港）科技有限公司官方企业网站 —— 专注为海内外传统制造业提供AI智能化改造与落地应用服务
+> 酈景（香港）科技有限公司官方企业网站 —— 专注为海内外传统制造业提供AI智能化改造与落地应用服务
 
 ## 公司信息
 
 | 项目 | 内容 |
 |------|------|
-| 公司全称 | 酄景（香港）科技有限公司 / LEGEND (HONGKONG) TECHNOLOGY CO. LIMITED |
+| 公司全称 | 酈景（香港）科技有限公司 / LEGEND (HONGKONG) TECHNOLOGY CO. LIMITED |
 | 成立时间 | 2021年 |
 | 注册地址 | 香港新蒲岗大有街3号万廸广场19H |
 | 登记证号 | 72627993-000-02-25-6 |
@@ -62,4 +62,4 @@ src/
 
 ---
 
-© 2025 酄景（香港）科技有限公司 LEGEND (HONGKONG) TECHNOLOGY CO. LIMITED
+© 2025 酈景（香港）科技有限公司 LEGEND (HONGKONG) TECHNOLOGY CO. LIMITED

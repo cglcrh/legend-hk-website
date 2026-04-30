@@ -50,7 +50,7 @@ export default function AboutSection() {
             专注AI智造 · <span className="gradient-text">立足香港</span>
           </h2>
           <p className="max-w-3xl mx-auto text-lg text-[#94a3b8]">
-            酄景（香港）科技有限公司成立于2021年，是一家专注于为传统制造业提供AI智能化改造与落地应用服务的高科技企业。
+            酈景（香港）科技有限公司成立于2021年，是一家专注于为传统制造业提供AI智能化改造与落地应用服务的高科技企业。
             我们以香港为总部，服务网络覆盖海内外，致力于成为制造业数字化转型的可靠伙伴。
           </p>
         </motion.div>
@@ -137,7 +137,7 @@ export default function AboutSection() {
             <div className="absolute left-4 lg:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-cyan-500/50 via-blue-500/50 to-purple-500/50" />
 
             {[
-              { year: '2021', title: '公司成立', desc: '酄景（香港）科技有限公司在香港注册成立，确立AI+制造业战略方向' },
+              { year: '2021', title: '公司成立', desc: '酈景（香港）科技有限公司在香港注册成立，确立AI+制造业战略方向' },
               { year: '2022', title: '技术积累', desc: '完成首个工业视觉检测项目落地，建立核心算法库与技术中台' },
               { year: '2023', title: '业务扩展', desc: '服务客户突破20家，业务覆盖汽车、电子、纺织等多个制造领域' },
               { year: '2024', title: '深耕落地', desc: '项目成功率达95%以上，形成标准化交付体系与行业解决方案库' },

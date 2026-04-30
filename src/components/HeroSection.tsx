@@ -124,7 +124,7 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="max-w-2xl mx-auto text-lg sm:text-xl text-[#94a3b8] mb-10 leading-relaxed"
         >
-          酄景（香港）科技有限公司专注为海内外传统制造业提供端到端的
+          酈景（香港）科技有限公司专注为海内外传统制造业提供端到端的
           <span className="text-cyan-400 font-medium">AI智能化改造</span>与
           <span className="text-cyan-400 font-medium">落地应用服务</span>，
           助力企业实现数字化转型升级

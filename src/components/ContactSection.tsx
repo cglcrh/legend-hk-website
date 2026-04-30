@@ -12,13 +12,13 @@ const contactInfo = [
   {
     icon: Mail,
     label: '电子邮箱',
-    value: 'contact@legendhk.tech',
+    value: 'contact@91legend.com',
     subValue: '商务合作请发送邮件',
   },
   {
     icon: Phone,
     label: '联系电话',
-    value: '+852 XXXX XXXX',
+    value: '如需请联系邮箱咨询',
     subValue: '工作日 9:00-18:00',
   },
 ]
@@ -182,7 +182,7 @@ export default function ContactSection() {
                         value={formData.phone}
                         onChange={handleChange}
                         className="w-full px-4 py-3 rounded-lg bg-white/5 border border-[rgba(148,163,184,0.15)] text-white placeholder-[#64748b] focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/20 transition-all"
-                        placeholder="+86 / +852"
+                        placeholder="请填写您的联系电话"
                       />
                     </div>
                   </div>
