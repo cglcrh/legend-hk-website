@@ -58,7 +58,7 @@ src/
 
 本项目通过 GitHub Actions 自动部署到 GitHub Pages。
 
-每次推送代码到 `main` 分支时，Actions 工作流会自动构建并将网站部署到 `https://<username>.github.io/legend-hk-website/`。
+每次推送代码到 `main` 分支时，Actions 工作流会自动构建并将网站部署到 `https://91legend.com/`。
 
 ---
 
