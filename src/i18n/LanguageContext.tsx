@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, type ReactNode } from 'react'
 
-export type Lang = 'zh-CN' | 'zh-HK'
+export type Lang = 'zh-CN' | 'zh-HK' | 'en'
 
 interface LanguageContextType {
   lang: Lang

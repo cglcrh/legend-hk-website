@@ -1,8 +1,16 @@
 import { useState, useEffect } from 'react'
-import { Menu, X, Cpu } from 'lucide-react'
+import { Menu, X, Cpu, Globe } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useLanguage } from '../i18n/LanguageContext'
 import content from '../i18n/content'
+
+const langLabels: Record<string, string> = {
+  'zh-CN': '简',
+  'zh-HK': '繁',
+  'en': 'EN',
+}
+
+const langOrder = ['zh-CN', 'zh-HK', 'en']
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -35,8 +43,10 @@ export default function Navbar() {
     }
   }
 
-  const toggleLang = () => {
-    setLang(lang === 'zh-CN' ? 'zh-HK' : 'zh-CN')
+  const cycleLang = () => {
+    const currentIndex = langOrder.indexOf(lang)
+    const nextIndex = (currentIndex + 1) % langOrder.length
+    setLang(langOrder[nextIndex] as any)
   }
 
   return (
@@ -86,10 +96,12 @@ export default function Navbar() {
             <div className="hidden lg:flex items-center gap-3">
               {/* Language Toggle */}
               <button
-                onClick={toggleLang}
-                className="px-3 py-1.5 text-xs font-medium text-[#94a3b8] bg-white/5 border border-[rgba(148,163,184,0.15)] rounded-lg hover:text-white hover:bg-white/10 transition-all"
+                onClick={cycleLang}
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-[#94a3b8] bg-white/5 border border-[rgba(148,163,184,0.15)] rounded-lg hover:text-white hover:bg-white/10 transition-all"
+                title={lang === 'zh-CN' ? '简体中文' : lang === 'zh-HK' ? '繁體中文' : 'English'}
               >
-                {t.langToggle}
+                <Globe className="w-3.5 h-3.5" />
+                {langLabels[lang]}
               </button>
 
               <a
@@ -104,10 +116,11 @@ export default function Navbar() {
             {/* Mobile Menu Button */}
             <div className="flex lg:hidden items-center gap-2">
               <button
-                onClick={toggleLang}
-                className="px-2.5 py-1.5 text-xs font-medium text-[#94a3b8] bg-white/5 border border-[rgba(148,163,184,0.15)] rounded-lg"
+                onClick={cycleLang}
+                className="inline-flex items-center gap-1 px-2.5 py-1.5 text-xs font-medium text-[#94a3b8] bg-white/5 border border-[rgba(148,163,184,0.15)] rounded-lg"
               >
-                {t.langToggle}
+                <Globe className="w-3.5 h-3.5" />
+                {langLabels[lang]}
               </button>
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
