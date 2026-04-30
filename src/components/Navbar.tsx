@@ -1,18 +1,22 @@
 import { useState, useEffect } from 'react'
 import { Menu, X, Cpu } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
-
-const navLinks = [
-  { label: '首页', href: '#hero' },
-  { label: '核心服务', href: '#services' },
-  { label: '解决方案', href: '#solutions' },
-  { label: '关于我们', href: '#about' },
-  { label: '联系我们', href: '#contact' },
-]
+import { useLanguage } from '../i18n/LanguageContext'
+import content from '../i18n/content'
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const { lang, setLang } = useLanguage()
+  const t = content[lang].nav
+
+  const navLinks = [
+    { label: t.home, href: '#hero' },
+    { label: t.services, href: '#services' },
+    { label: t.solutions, href: '#solutions' },
+    { label: t.about, href: '#about' },
+    { label: t.contact, href: '#contact' },
+  ]
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,6 +33,10 @@ export default function Navbar() {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })
     }
+  }
+
+  const toggleLang = () => {
+    setLang(lang === 'zh-CN' ? 'zh-HK' : 'zh-CN')
   }
 
   return (
@@ -55,7 +63,7 @@ export default function Navbar() {
                   酈景科技
                 </span>
                 <span className="text-[10px] text-[#94a3b8] tracking-widest uppercase leading-tight">
-                  LegendHK
+                  LEGEND HK
                 </span>
               </div>
             </a>
@@ -74,24 +82,40 @@ export default function Navbar() {
               ))}
             </div>
 
-            {/* CTA Button */}
-            <div className="hidden lg:block">
+            {/* Right side actions */}
+            <div className="hidden lg:flex items-center gap-3">
+              {/* Language Toggle */}
+              <button
+                onClick={toggleLang}
+                className="px-3 py-1.5 text-xs font-medium text-[#94a3b8] bg-white/5 border border-[rgba(148,163,184,0.15)] rounded-lg hover:text-white hover:bg-white/10 transition-all"
+              >
+                {t.langToggle}
+              </button>
+
               <a
                 href="#contact"
                 onClick={(e) => handleLinkClick(e, '#contact')}
                 className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium text-white bg-gradient-to-r from-cyan-600 to-blue-600 rounded-lg hover:from-cyan-500 hover:to-blue-500 transition-all duration-200 hover:shadow-[0_0_20px_rgba(6,182,212,0.3)] btn-shine"
               >
-                立即咨询
+                {t.cta}
               </a>
             </div>
 
             {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-2 text-[#94a3b8] hover:text-white rounded-lg hover:bg-white/5 transition-colors"
-            >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+            <div className="flex lg:hidden items-center gap-2">
+              <button
+                onClick={toggleLang}
+                className="px-2.5 py-1.5 text-xs font-medium text-[#94a3b8] bg-white/5 border border-[rgba(148,163,184,0.15)] rounded-lg"
+              >
+                {t.langToggle}
+              </button>
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="p-2 text-[#94a3b8] hover:text-white rounded-lg hover:bg-white/5 transition-colors"
+              >
+                {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
+            </div>
           </div>
         </div>
       </motion.nav>
@@ -130,7 +154,7 @@ export default function Navbar() {
                   transition={{ delay: 0.25 }}
                   className="mt-4 px-4 py-3 text-center text-white bg-gradient-to-r from-cyan-600 to-blue-600 rounded-xl font-medium"
                 >
-                  立即咨询
+                  {t.cta}
                 </motion.a>
               </div>
             </div>
